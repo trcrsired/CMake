@@ -140,6 +140,9 @@
 #  define LOAD_LIBRARY_SEARCH_SYSTEM32 0x00000800
 #endif
 
+#undef HAVE_ARC4RANDOM
+#undef HAVE_ARC4RANDOM_BUF
+
 #if ! defined(HAVE_GETRANDOM) && ! defined(HAVE_SYSCALL_GETRANDOM)             \
     && ! defined(HAVE_ARC4RANDOM_BUF) && ! defined(HAVE_ARC4RANDOM)            \
     && ! defined(XML_DEV_URANDOM) && ! defined(_WIN32)                         \

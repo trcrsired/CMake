@@ -411,7 +411,7 @@ static void uv__process_child_init(const uv_process_options_t* options,
     uv__write_errno(error_fd);
 
 #ifndef CMAKE_BOOTSTRAP
-#if defined(__linux__) || defined(__FreeBSD__)
+#if defined(__linux__)&&!defined(__ANDROID__) || defined(__FreeBSD__)
   if (options->cpumask != NULL) {
     cpumask_size = uv_cpumask_size();
     assert(options->cpumask_size >= (size_t)cpumask_size);

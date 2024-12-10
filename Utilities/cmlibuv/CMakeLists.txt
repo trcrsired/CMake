@@ -213,6 +213,7 @@ if(CMAKE_SYSTEM_NAME STREQUAL "Linux")
     src/unix/proctitle.c
     src/unix/sysinfo-loadavg.c
     src/unix/sysinfo-memory.c
+    src/unix/pthread-fixes.c
     )
 endif()
 
